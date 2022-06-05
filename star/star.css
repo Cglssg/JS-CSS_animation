@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92);
+    background: radial-gradient(200% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92, #f7f7b6);
+    animation: animation 10s;
+}
+
+@keyframes animation {}
