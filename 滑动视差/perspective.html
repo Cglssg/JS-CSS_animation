@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+
+    <!-- 主要原理 利用 透视 以及 translateZ 的移动 -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .shell {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            perspective: 3px;
+        }
+        
+        .shell div {
+            /* 但是不用relative就会出错 */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+        }
+        
+        .heading {
+            color: #fff;
+            transform: translateZ(1px) translateY(-40vh);
+        }
+        
+        .text {
+            width: 100vw;
+            height: 50vh;
+            font-size: 30px;
+            background-color: #fff;
+        }
+        
+        .image {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            transform: translateZ(-1px) scale(1.6);
+            z-index: -1;
+        }
+        /* image text 与 heading分别在轴处于不同位置，因此滑动界面的时候速度不一样，产生视差公洞效果 */
+    </style>
+
+</head>
+
+<body>
+
+    <div class="shell">
+        <div class="image" style="background-image:url('./1.jpg');"></div>
+        <div class="heading">
+            <h1> Long the my sunshine</h1>
+        </div>
+
+        <div class="text">
+            <p>Look for sun when you lost</p>
+        </div>
+
+        <div class="image" style="background-image:url('./2.jpg');"></div>
+        <div class="heading">
+            <h1> Long the my sunshine</h1>
+        </div>
+        <div class="text">
+            <p>Look for sun when you lost</p>
+        </div>
+
+
+        <div class="image" style="background-image:url('./3.jpg');"></div>
+        <div class="heading">
+            <h1> Long the my sunshine</h1>
+        </div>
+        <div class="text">
+            <p>Look for sun when you lost</p>
+        </div>
+
+
+        <div class="image" style="background-image:url('./4.jpg');"></div>
+        <div class="heading">
+            <h1> Long the my sunshine</h1>
+        </div>
+        <div class="text">
+            <p>Look for sun when you lost</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

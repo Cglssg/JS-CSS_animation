@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    
+    .image {
+        width: 100%;
+        height: 100vh;
+        /* attachment是关键   相比起 perspective 的定位方法更加简介*/
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<body>
+
+
+    <div class="image" style="background-image:url('./1.jpg');"></div>
+    <div class="heading">
+        <h1> Long the my sunshine</h1>
+    </div>
+    <div class="image" style="background-image:url('./2.jpg');"></div>
+    <div class="heading">
+        <h1> Long the my sunshine</h1>
+    </div>
+    <div class="image" style="background-image:url('./3.jpg');"></div>
+    <div class="heading">
+        <h1> Long the my sunshine</h1>
+    </div>
+    <div class="image" style="background-image:url('./4.jpg');"></div>
+    <div class="heading">
+        <h1> Long the my sunshine</h1>
+    </div>
+
+
+</body>
+
+</html>
